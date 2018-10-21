@@ -1,0 +1,19 @@
+{
+  "name": "fifa-app-be",
+  "version": "1.0.0",
+  "description": "FIFA app backend",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mathimariman/fifa-app-be.git"
+  },
+  "author": "Mathias Mariman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mathimariman/fifa-app-be/issues"
+  },
+  "homepage": "https://github.com/mathimariman/fifa-app-be#readme"
+}
