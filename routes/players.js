@@ -3,8 +3,9 @@ const router = express.Router();
 const axios = require('axios');
 
 router.get('/search', (req, res) => {
-    if (req.query.term) {
-        const searchTerm = JSON.stringify({name: req.query.term});
+    const playerName = req.query.playerName;
+    if (playerName) {
+        const searchTerm = JSON.stringify({name: playerName});
         axios.get('https://www.easports.com/fifa/ultimate-team/api/fut/item?jsonParamObject=' + searchTerm)
             .then(function (response) {
                 res.send(response.data.items);
