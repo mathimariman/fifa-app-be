@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mathimariman/fifa-app-be/issues"
   },
-  "homepage": "https://github.com/mathimariman/fifa-app-be#readme"
+  "homepage": "https://github.com/mathimariman/fifa-app-be#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
