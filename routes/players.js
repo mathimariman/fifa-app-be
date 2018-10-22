@@ -5,7 +5,6 @@ const axios = require('axios');
 router.get('/search', (req, res) => {
     if (req.query.term) {
         const searchTerm = JSON.stringify({name: req.query.term});
-        console.log(searchTerm);
         axios.get('https://www.easports.com/fifa/ultimate-team/api/fut/item?jsonParamObject=' + searchTerm)
             .then(function (response) {
                 res.send(response.data.items);
