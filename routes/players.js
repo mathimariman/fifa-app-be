@@ -3,7 +3,7 @@ const router = express.Router();
 const axios = require('axios');
 const passport = require('passport');
 
-router.get('/search', passport.authenticate('basic'), (req, res) => {
+router.get('/search', passport.authenticate('basic', {session: false}), (req, res) => {
     const playerName = req.query.playerName;
     if (playerName) {
         const searchTerm = JSON.stringify({name: playerName});

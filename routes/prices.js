@@ -3,7 +3,7 @@ const router = express.Router();
 const axios = require('axios');
 const passport = require('passport');
 
-router.get('/', passport.authenticate('basic'), (req, res) => {
+router.get('/', passport.authenticate('basic', {session: false}), (req, res) => {
     const playerId = req.query.playerId;
     if (playerId) {
         axios.get('https://www.futbin.com/19/playerPrices?player=' + playerId)
