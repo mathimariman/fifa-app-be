@@ -3,7 +3,7 @@ const passport = require('passport');
 const cors = require('cors');
 const BasicStrategy = require('passport-http').BasicStrategy;
 const app = express();
-const port = process.env.PORT || 443;
+const port = process.env.PORT || 80;
 const players = require('./routes/players');
 const prices = require('./routes/prices');
 
@@ -22,4 +22,4 @@ app.use('/api/players', players);
 app.use('/api/prices', prices);
 
 
-app.listen(port, () => console.log('Running....'));
+app.listen(port, () => console.log('Running.... (' + this.port + ')'));
