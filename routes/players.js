@@ -9,7 +9,15 @@ router.get('/search', passport.authenticate('basic', {session: false}), (req, re
         const searchTerm = JSON.stringify({name: playerName});
         axios.get('https://www.easports.com/fifa/ultimate-team/api/fut/item?jsonParamObject=' + searchTerm)
             .then(function (response) {
-                res.send(response.data.items);
+                res.send(response.data.items.map(player => (
+                    {
+                        name: player.commonName ? player.commonName : player.firstName + ' ' + player.lastName,
+                        rating: player.rating,
+                        position: player.position,
+                        id: player.id,
+                        image: player.headshot.imgUrl
+                    }
+                )));
             })
             .catch(function (error) {
                 console.log(error);

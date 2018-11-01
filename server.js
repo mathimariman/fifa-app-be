@@ -9,10 +9,8 @@ const prices = require('./routes/prices');
 passport.use(new BasicStrategy(
     function (username, password, done) {
         if (username === 'fifa-user' && password === 'XjEheBerh2') {
-            console.log('user OK');
-            return done(null, {username: 'mathi'});
+            return done(null, {username: username});
         } else {
-            console.log('user NOT ok');
             return done(null, false);
         }
     }
