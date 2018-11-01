@@ -1,5 +1,6 @@
 const express = require('express');
 const passport = require('passport');
+const cors = require('cors');
 const BasicStrategy = require('passport-http').BasicStrategy;
 const app = express();
 const port = process.env.PORT || 3000;
@@ -16,7 +17,7 @@ passport.use(new BasicStrategy(
     }
 ));
 app.use(passport.initialize());
-
+app.use(cors());
 app.use('/api/players', players);
 app.use('/api/prices', prices);
 
