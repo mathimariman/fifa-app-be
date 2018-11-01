@@ -22,4 +22,4 @@ app.use('/api/players', players);
 app.use('/api/prices', prices);
 
 
-app.listen(port, () => console.log('Running.... (' + this.port + ')'));
+app.listen(port, () => console.log('Running.... (' + port + ')'));
