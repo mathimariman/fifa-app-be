@@ -3,7 +3,7 @@ const passport = require('passport');
 const cors = require('cors');
 const BasicStrategy = require('passport-http').BasicStrategy;
 const app = express();
-const port = process.env.PORT || 80;
+const port = process.env.PORT || 3000;
 const players = require('./routes/players');
 const prices = require('./routes/prices');
 
